@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inky - Moves - Option</title>
+    <link rel="stylesheet" href="chota.min.css">
+  </head>
+  <body style="width: 50%; margin: auto; ">
+
+    <h4>Inky - Option</h4>
+
+    <form>
+
+    <fieldset class="row">
+
+    <p class="col-11">Inky - Moves</p> 
+    <p class="col-1"><input type="checkbox"/></p>
+
+    <label class="col-12">Height:
+      <input type="range" id="height" />
+    </label>
+
+    <label class="col-12">Width:
+      <input type="range" id="width" />
+    </label>
+    
+    <label class="col-12">Offset (from bottom):
+      <input type="range" id="offset" />
+    </label>
+
+    <label class="col-12">Color:
+      <input type="color" id="color" />
+      <input type="range" id="opacity" />
+    </label>
+
+    </fieldset>
+    
+    <div class="row">
+
+    <div class="col-12"></div>
+
+    <footer class="is-right col-12">
+	<button id="save" class="button outline dark">Save</button>
+    </footer> 
+
+    <div id="status" class="col-12"></div>
+
+    </div>
+
+    </form>
+
+    <script src="options.js"></script>
+    <script src="content.js"></script>
+
+  </body>
+</html>

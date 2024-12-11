@@ -1,0 +1,10 @@
+* {
+   background-color: transparent !important;
+   color:            #000000 !important;
+}
+
+a {
+    text-decoration:       underline !important;
+    text-decoration-color: #aaaaaa   !important;
+    text-underline-offset: 3px       !important;
+}
