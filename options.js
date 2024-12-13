@@ -5,35 +5,39 @@
 
    // Saves options to chrome.storage
    const saveOptions = () => {
-     //const color = document.getElementById('color').value;
-     //const likesColor = document.getElementById('like').checked;
-
      chrome.storage.sync.set(
-       { /* favoriteColor: color, likesColor: likesColor */},
-       () => {
-         // Update status to let user know options were saved.
-         const status = document.getElementById('status');
-         status.textContent = 'Options saved.';
-         setTimeout(() => {
-           status.textContent = '';
-         }, 750);
-       }
+       { 
+          move: document.getElementById('move').checked,
+          makeup: document.getElementById('makeup').ckecked,
+
+          width: document.getElementById('width').value,
+          height: document.getElementById('height').value,
+          offset: document.getElementById('offset').value,
+          opacity: document.getElementById('opacity').value
+
+       },
      );
    };
 
    // Restores select box and checkbox state using the preferences
    // stored in chrome.storage.
    const restoreOptions = () => {
-     chrome.storage.sync.get(
-       { /* favoriteColor: 'red', likesColor: true */ },
+     chrome.storage.sync.get().then( 
        (items) => {
-         //document.getElementById('color').value = items.favoriteColor;
-         //document.getElementById('like').checked = items.likesColor;
+          console.log( items ); 
+          items.move && ( document.getElementById('move').checked = items.move );
+          items.makeup && ( document.getElementById('makeup').ckecked = items.makeup);
+
+          items.width && ( document.getElementById('width').value = items.width );
+          items.height && ( document.getElementById('height').value = items.height );
+          items.offset && ( document.getElementById('offset').value = items.offset );
+          items.opacity && ( document.getElementById('opacity').value = items.opacity );
        }
      );
    };
 
    document.addEventListener('DOMContentLoaded', restoreOptions);
-   document.getElementById('save').addEventListener('click', saveOptions);
+
+   Array.from(document.getElementsByTagName('input')).forEach( (e) => e.addEventListener('change', saveOptions) );
 
 })();

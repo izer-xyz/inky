@@ -10,39 +10,36 @@
 
     <form>
 
+    <label class="row">Color:
+      <input type="range" id="opacity" value="0.1" min="0" max="1" step="0.1"/>
+    </label>
+
     <fieldset class="row">
 
     <p class="col-11">Inky - Moves</p> 
-    <p class="col-1"><input type="checkbox"/></p>
+    <p class="col-1"><input type="checkbox" id="move" checked /></p>
 
     <label class="col-12">Height:
-      <input type="range" id="height" />
+      <input type="range" id="height" value="30" min="0" max="50" />
     </label>
 
     <label class="col-12">Width:
-      <input type="range" id="width" />
+      <input type="range" id="width" value="5" min="0" max="10"/>
     </label>
     
     <label class="col-12">Offset (from bottom):
-      <input type="range" id="offset" />
+      <input type="range" id="offset" value="3" min="0" max="10" />
     </label>
 
-    <label class="col-12">Color:
-      <input type="color" id="color" />
-      <input type="range" id="opacity" />
-    </label>
 
     </fieldset>
+
+    <fieldset class="row">
+
+    <p class="col-11">Inky - Makeup</p> 
+    <p class="col-1"><input type="checkbox" id="makeup" checked /></p>
     
     <div class="row">
-
-    <div class="col-12"></div>
-
-    <footer class="is-right col-12">
-	<button id="save" class="button outline dark">Save</button>
-    </footer> 
-
-    <div id="status" class="col-12"></div>
 
     </div>
 
