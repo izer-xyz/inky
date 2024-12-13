@@ -2,9 +2,9 @@
 <html>
   <head>
     <title>Inky - Moves - Option</title>
-    <link rel="stylesheet" href="chota.min.css">
+    <link rel="stylesheet" href="css/chota.min.css">
   </head>
-  <body style="width: 50%; margin: auto; ">
+  <body style="width: 70%; margin: auto; ">
 
     <h4>Inky - Option</h4>
 
@@ -18,6 +18,10 @@
 
     <p class="col-11">Inky - Moves</p> 
     <p class="col-1"><input type="checkbox" id="move" checked /></p>
+
+    <label class="col-12">Scroll Offset:
+      <input type="range" id="scroll" value="0.8" min="0" max="1" step="0.05"/>
+    </label>
 
     <label class="col-12">Height:
       <input type="range" id="height" value="30" min="0" max="50" />
@@ -45,8 +49,8 @@
 
     </form>
 
-    <script src="options.js"></script>
-    <script src="content.js"></script>
+    <script src="js/options.js"></script>
+    <script src="js/content.js"></script>
 
   </body>
 </html>
